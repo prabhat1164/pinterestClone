@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+</head>
+
+<body>
+    <button id="profileButton" class="upbtn">Profile</button>
+    <header>
+        <h1>Pinterest Feeds</h1>
+    </header>
+    <div class="container">
+        <% posts.forEach(post => { %>
+            <div class="box">
+                <a href="ttps://oriontralelblog.com/wp-content/uploads/2019/08/IMG_6310.jpg">
+                    <img src="/images/uploads/<%= post.image %>" alt="image"></a>
+                <div class="caption"> <i> <%= post.imageText%> </i></div>
+            </div>
+       <% }); %>
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("profileButton").addEventListener("click", function() {
+            window.location.href = "/profile";
+        });
+    </script>
+</body>
+
+
+</html>
